@@ -1,0 +1,130 @@
+html, body {
+    font-family: 'Barlow', sans-serif;
+}
+body {
+	/* background-color:#c643c1; */
+    font-weight: 400;
+    color: #100d29;
+}
+
+h2, h3, h4, h5 {
+    font-weight: 600;
+    color: #281b5e;
+    margin: 1vh;
+}
+h6 {
+    font-weight: 600;
+    color: #433088;
+    margin: 1vh;
+    text-emphasis: emphasis;
+}
+h1{
+    color: #96ecfb; 
+}
+
+.jumbotron {
+	background-color: #281b5e;
+	color: #fff;
+}
+.quizbox-container {
+    background-color: whitesmoke;
+    width: 90%;
+    margin: 0 auto;
+    padding: 1vh;
+}
+.quiz-option{
+    background-color: rgb(234, 240, 245);
+}
+.final-score {
+    color: white;
+    font-weight: 600;
+    background-color: #433088;
+    border: 2px solid #433088;
+    max-width: 20%;
+    text-align: center;
+}
+.game-over {
+    font-size: xx-large;
+    text-align: center;
+    color:  #96ecfb;
+    background-color:  #281b5e;
+    border: 4px solid white;
+    margin: 4vh;
+    padding: 4vh;
+}
+.running-score-container {
+    color: #433088;
+    background-color: white;
+    opacity: 90%;
+     max-width: 20%;
+     
+}
+.gallery{
+    width: 80%;
+    margin: 0 auto;
+    border: 0.5px dotted #433088 ;
+    padding: 1rem;
+    background-color: #e4ddf8ee;
+}
+.hide {
+    display: none;
+}
+
+/* lightbox */
+a.photo {
+	display: inline-block;
+}
+.photos > div {
+	margin-bottom: 1rem;
+}
+
+
+#lightbox-wrapper  {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #000000cc;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	padding: 2rem 3rem;
+}
+#lightbox-wrapper.show { 
+	display: flex;
+}
+
+#lightbox,
+#lightbox img {
+	max-height: 95vh;
+}
+
+#lightbox {
+    margin-bottom: 2.5vh;
+    border: 1vh white solid;
+}
+
+#lightbox .caption {
+	font-size: 0.8rem;
+	font-style: italic;
+    text-align: center;
+    color: white;
+	background-color: #433088;
+	padding: 0.25rem 0.5rem;
+}
+
+/* // Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default in Bootstrap, handled in HTML bootstrap classes
+
+// Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {  }
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {  }
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {  }
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  }

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <!-- Google font Barlow, three styles-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;1,600&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <!-- Icon font -->
+    <script src="https://kit.fontawesome.com/1c077411c6.js" crossorigin="anonymous"></script>
+    <!-- my stylesheet -->
+    <link rel="stylesheet" href="quiz.css">
+</head>
+
+<body>
+    <!-- Main wrapper -->
+    <main class="main-container">
+
+        <div class="jumbotron jumbotron-fluid">
+            <h1 class="display-4 mx-5">Guess the classmate</h1>
+        </div>
+        <!-- bootstrap container -->
+        <div class="container">
+
+            <!-- Score and play again button after game is over-->
+            <div class="result game-over hide"> Your score is </div>
+            <div class="play-again hide"><button type="button" class="btn btn-primary btn-lg">Play again?</button></div>
+            <!-- Start the game button -->
+            <div class="row my-3">
+                <div class="start-button-container  quiz-game my-2 col-sm-12 col-md-6 col-lg-8 ">
+                    <button type="button" class="btn btn-primary btn-lg">Start Game!</button>
+                    <h5 class="instructions">Find a classmate:</h5>
+                    <h6><em>Best of 10! Start guessing...</em></h4>
+                </div>
+                <!-- Total score -->
+                <div class="final-score result col  my-2 hide">
+                    Score
+                </div>
+                <!-- Shows the current score -->
+                <div class="running-score-container col mx-3 my-2 justify-content-end">
+                    <i class="far fa-thumbs-up alert alert-success hide">nice!</i>
+                    <i class="fas fa-thumbs-down alert alert-danger hide"></i>
+                </div>
+            </div>
+        </div>
+        <!-- The section or image of the classmate with questions -->
+        <section class="quizbox-container quiz-game">
+            <h2>Match face to name:</h2>
+            <div class="quiz-image row justify-content-center">
+                <img src="assets/quiz.jpg" alt="">
+            </div>
+            <div class="quiz-form-container">
+                <form class="quiz-form">
+                    <div class="quiz-options mx-2 row">
+                        <div class="quiz-option answer-1 my-2  col-sm-12 col-md-6 col-lg-3">
+                            <input type="radio" name="question" id="ans1" checked>
+                            <label for="ans1" class="quiz-option-label">1 </label>
+                        </div>
+                        <div class="quiz-option answer-2 my-2  col-sm-12 col-md-6 col-lg-3">
+                            <input type="radio" name="question" id="ans2">
+                            <label for="ans2" class="quiz-option-label">2 </label>
+                        </div>
+                        <div class="quiz-option answer-3 my-2  col-sm-12 col-md-6 col-lg-3">
+                            <input type="radio" name="question" id="ans3">
+                            <label for="ans3" class="quiz-option-label">3 </label>
+                        </div>
+                        <div class="quiz-option answer-4 my-2  col-sm-12 col-md-6 col-lg-3">
+                            <input type="radio" name="question" id="ans4">
+                            <label for="ans4" class="quiz-option-label">4</label>
+                        </div>
+                    </div>
+                    <div class="row my-2 py-4 justify-content-center">
+                        <div class="submit-answers-button col-sm-12 col-md-3 col-lg-2 my-1">
+                            <button class="btn btn-primary" id="guessAnswerbtn" type="submit">Guess!</button>
+                        </div>
+                        <!-- <div class="guess-counter col-md-3 col-lg-2 my-1">
+                            Guesses
+                        </div> -->
+                        <!-- button to show the correct answer -->
+                        <div class="show-score-button col-sm-12 col-md-3 col-lg-2 my-1 text-left ">
+                            <button type="button" class="btn btn-outline-info">Show Score</button>
+                        </div>
+                        <div class="col-sm-12 col-md-3 col-lg-2 my-1 text-left">
+                            <button type="button" class="btn btn-outline-dark class-gallery">Swotsheet </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section class="gallery hide">
+            <h2>Here's the class!</h2>
+            <div class="row photos">
+                <div class="col-sm-6 col-md-4 col-lg-2 text-center">
+                    <a href="assets/amanda-olsson.jpg" class="photo" data-caption="Amanda Olsson">
+                        <img src="assets/thumbnails/amanda-olsson_tn.jpg" class="img-fluid">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2 text-center">
+                    <a href="assets/august-ronnle.jpg" class="photo" data-caption="August Ronnie">
+                        <img src="assets/thumbnails/august-ronnle_tn.jpg" class="img-fluid">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2 text-center">
+                    <a href="assets/axel-bjornfot.jpg" class="photo" data-caption="Axel Börnfot">
+                        <img src="assets/thumbnails/axel-bjornfot_tn.jpg" class="img-fluid">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2 text-center">
+                    <a href="assets/cedrik-von-heiroth.jpg" class="photo" data-caption="Cedrik von Heiroth">
+                        <img src="assets/thumbnails/cedrik-von-heiroth_tn.jpg" class="img-fluid">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2 text-center">
+                    <a href="assets/celil-tat.jpg" class="photo" data-caption="Celil Tat">
+                        <img src="assets/thumbnails/celil-tat_tn.jpg" class="img-fluid">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2 text-center">
+                    <a href="assets/christina-mannerberg.jpg" class="photo" data-caption="Christina Mannerberg">
+                        <img src="assets/thumbnails/christina-mannerberg_tn.jpg" class="img-fluid">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2 text-center">
+                    <a href="assets/christopher-lindstrom.jpg" class="photo" data-caption="Christopher Lindstrom">
+                        <img src="assets/thumbnails/christopher-lindstrom_tn.jpg" class="img-fluid">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2 text-center">
+                    <a href="assets/daniel-palmdal.jpg" class="photo" data-caption="Daniel Palmdal">
+                        <img src="assets/thumbnails/daniel-palmdal_tn.jpg" class="img-fluid">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2 text-center">
+                    <a href="assets/elena-myadzeleva.jpg" class="photo" data-caption="Elena Myadzeleva">
+                        <img src="assets/thumbnails/elena-myadzeleva_tn.jpg" class="img-fluid">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2 text-center">
+                    <a href="assets/elin-stenquist.jpg" class="photo" data-caption="Elin Stenquist">
+                        <img src="assets/thumbnails/elin-stenquist_tn.jpg" class="img-fluid">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2 text-center">
+                    <a href="assets/emma-andersson.jpg" class="photo" data-caption="Emma Andersson">
+                        <img src="assets/thumbnails/emma-andersson_tn.jpg" class="img-fluid">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2 text-center">
+                    <a href="assets/frida-stenberg.jpg" class="photo" data-caption="Frida Stenberg">
+                        <img src="assets/thumbnails/frida-stenberg_tn.jpg" class="img-fluid">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2 text-center">
+                    <a href="assets/henrik-lood.jpg" class="photo" data-caption="Henrik Lööd">
+                        <img src="assets/thumbnails/henrik-lood_tn.jpg" class="img-fluid">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2 text-center">
+                    <a href="assets/hitomi-winberg.jpg" class="photo" data-caption="Hitomi Winberg">
+                        <img src="assets/thumbnails/hitomi-winberg_tn.jpg" class="img-fluid">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2 text-center">
+                    <a href="assets/Isabella-bjelobrk.jpg" class="photo" data-caption="Isabella Bjelobrk">
+                        <img src="assets/thumbnails/Isabella-bjelobrk_tn.jpg" class="img-fluid">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2 text-center">
+                    <a href="assets/jerry-phuong.jpg" class="photo" data-caption="Jerry Phuong">
+                        <img src="assets/thumbnails/jerry-phuong_tn.jpg" class="img-fluid">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2 text-center">
+                    <a href="assets/johan-markstrom.jpg" class="photo" data-caption="Johan Markström">
+                        <img src="assets/thumbnails/johan-markstrom_tn.jpg" class="img-fluid">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2 text-center">
+                    <a href="assets/johannes-hernehult.jpg" class="photo" data-caption="Johannes Hernehult">
+                        <img src="assets/thumbnails/johannes-hernehult_tn.jpg" class="img-fluid">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2 text-center">
+                    <a href="assets/johnny-lay.jpg" class="photo" data-caption="Johnny Lay">
+                        <img src="assets/thumbnails/johnny-lay_tn.jpg" class="img-fluid">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2 text-center">
+                    <a href="assets/khaled-hassan.jpg" class="photo" data-caption="Khaled Hassan">
+                        <img src="assets/thumbnails/khaled-hassan_tn.jpg" class="img-fluid">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2 text-center">
+                    <a href="assets/kyd-kitchaiya.jpg" class="photo" data-caption="Kyd Kitchaiya">
+                        <img src="assets/thumbnails/kyd-kitchaiya_tn.jpg" class="img-fluid">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2 text-center">
+                    <a href="assets/leo-eriksson.jpg" class="photo" data-caption="Leo Eriksson">
+                        <img src="assets/thumbnails/leo-eriksson_tn.jpg" class="img-fluid">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2 text-center">
+                    <a href="assets/linda-hultemark.jpeg" class="photo" data-caption="Linda Hultemark">
+                        <img src="assets/thumbnails/linda-hultemark_tn.jpg" class="img-fluid">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2 text-center">
+                    <a href="assets/lisa-hansson.jpg" class="photo" data-caption="Lisa Hansson">
+                        <img src="assets/thumbnails/lisa-hansson_tn.jpg" class="img-fluid">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2 text-center">
+                    <a href="assets/lovisa-nordstrom.jpg" class="photo" data-caption="Lovisa Nordstrom">
+                        <img src="assets/thumbnails/lovisa-nordstrom_tn.jpg" class="img-fluid">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2 text-center">
+                    <a href="assets/marko-zdravkovski.jpg" class="photo" data-caption="Marko Zdravkovski">
+                        <img src="assets/thumbnails/marko-zdravkovski_tn.jpg" class="img-fluid">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2 text-center">
+                    <a href="assets/mehmet-yazgan.jpg" class="photo" data-caption="Mehmet Yazgan">
+                        <img src="assets/thumbnails/mehmet-yazgan_tn.jpg" class="img-fluid">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2 text-center">
+                    <a href="assets/mikaela-norrelokke.jpg" class="photo" data-caption="Mikaela Nörrelökke">
+                        <img src="assets/thumbnails/mikaela-norrelokke_tn.jpg" class="img-fluid">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2 text-center">
+                    <a href="assets/miranda-trang.jpg" class="photo" data-caption="Miranda Trang">
+                        <img src="assets/thumbnails/miranda-trang_tn.jpg" class="img-fluid">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2 text-center">
+                    <a href="assets/mona-khorasani.jpg" class="photo" data-caption="Mona Khorasani">
+                        <img src="assets/thumbnails/mona-khorasani_tn.jpg" class="img-fluid">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2 text-center">
+                    <a href="assets/oliver.kellgren.jpeg" class="photo" data-caption="Oliver Kellgren">
+                        <img src="assets/thumbnails/oliver_tn.jpg" class="img-fluid">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2 text-center">
+                    <a href="assets/oskar-anderberg.jpg" class="photo" data-caption="Oskar Anderberg">
+                        <img src="assets/thumbnails/oskar-anderberg_tn.jpg" class="img-fluid">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2 text-center">
+                    <a href="assets/pernilla-lundahl.jpg" class="photo" data-caption="Pernilla Lundahl">
+                        <img src="assets/thumbnails/pernilla-lundahl_tn.jpg" class="img-fluid">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2 text-center">
+                    <a href="assets/pucha-sayerz-olsen.jpg" class="photo" data-caption="Pucha Sayerz-Olsen">
+                        <img src="assets/thumbnails/pucha-sayerz-olsen_tn.jpg" class="img-fluid">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2 text-center">
+                    <a href="assets/saga-swahn.jpg" class="photo" data-caption="Saga Swahn">
+                        <img src="assets/thumbnails/saga-swahn_tn.jpg" class="img-fluid">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2 text-center">
+                    <a href="assets/sara-mattisson.jpg" class="photo" data-caption="Sara Mattisson">
+                        <img src="assets/thumbnails/sara-mattisson_tn.jpg" class="img-fluid">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2 text-center">
+                    <a href="assets/sebastian-mineur.jpg" class="photo" data-caption="Sebastian Mineur">
+                        <img src="assets/thumbnails/sebastian-mineur_tn.jpg" class="img-fluid">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2 text-center">
+                    <a href="assets/simon-bergstrand.jpg" class="photo" data-caption="Simon Bergstrand">
+                        <img src="assets/thumbnails/simon-bergstrand_tn.jpg" class="img-fluid">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2 text-center">
+                    <a href="assets/susanne_eneroth.jpeg" class="photo" data-caption="Susanne Eneroth">
+                        <img src="assets/thumbnails/susanne_eneroth_tn.jpg" class="img-fluid">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2 text-center">
+                    <a href="assets/svitlana-rybakova.jpg" class="photo" data-caption="Svitlana Rybakova">
+                        <img src="assets/thumbnails/svitlana-rybakova_tn.jpg" class="img-fluid">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2 text-center">
+                    <a href="assets/tricia-hartmann.jpg" class="photo" data-caption="Tricia Hartmann">
+                        <img src="assets/thumbnails/tricia-hartmann_tn.jpg" class="img-fluid">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2 text-center">
+                    <a href="assets/zainab-ahmad.jpeg" class="photo" data-caption="Zainab Ahmad">
+                        <img src="assets/thumbnails/zainab-ahmad_tn.jpg" class="img-fluid">
+                    </a>
+                </div>
+
+            </div>
+        </section>
+        <div id="lightbox-wrapper">
+            <div id="lightbox">
+                <img src="" class="img-fluid">
+                <div class="caption"></div>
+            </div>
+        </div>
+        </div>
+    </main>
+    <script src="quiz.js"></script>
+</body>
