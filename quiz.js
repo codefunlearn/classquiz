@@ -325,6 +325,7 @@ nextClassfellow(tempStudentArray, currentStudentIndex); //displayed in HTML quiz
 //Event. click 'Find a classfellow' for new student slide quiz
 newQuizSlide.addEventListener('click', e => {
     // console.log("after find classfellow button");
+    newQuizSlide.scrollIntoView(true);
     getNewQuizSlide();
 });
 
@@ -360,6 +361,7 @@ quizForm.addEventListener('submit', e => {
         setTimeout(getNewQuizSlide, 200);
     } else {
         fnShowScore();
+        window.scrollTo(0,0);
         totalScore.classList.add('hide');
         quizGame.classList.add('hide');
         quizBox.classList.add('hide');
