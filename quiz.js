@@ -289,8 +289,9 @@ let nextClassfellow = function (objectArray, studentIndex) {
     quizAnswers.forEach(answer => {
         //ensuring unique names in the options list using filter()
         tempAnswer = fnRandomizeNumber(0, objectArray.length - 1);
-        answer.innerText = objectArray[tempAnswer].name;
+        
         for (i = 0; i < tempIndices.length; i++) {
+            
             tempIndices = tempIndices.filter(tempIndex => (tempIndex !=tempAnswer && tempIndex != studentIndex));
             answer.innerText = objectArray[tempAnswer].name;
             tempIndices.push(tempAnswer);
