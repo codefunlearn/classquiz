@@ -282,17 +282,19 @@ let nextClassfellow = function (objectArray, studentIndex) {
     quizImg.setAttribute('src', objectArray[studentIndex].image);
     //update the quiz options randomly
     let tempAnswer;
-    //a new array with index of the correct answer 
-    let tempIndices = [];
+   let tempIndices= [];
     
     //foreach loop using random unique index values to obtain names for the  quiz options
     quizAnswers.forEach(answer => {
         //ensuring unique names in the options list using filter()
         tempAnswer = fnRandomizeNumber(0, objectArray.length - 1);
-        tempIndices = tempIndices.filter(tempIndex => (tempIndex !=tempAnswer && tempIndex != studentIndex));
-        answer.innerText = objectArray[tempAnswer].name;
-        tempIndices.push(tempAnswer);
+        while (tempAnswer == studentIndex) {tempAnswer = fnRandomizeNumber(0, objectArray.length - 1)}
+        if  (tempAnswer != studentIndex) {
+            answer.innerText = objectArray[tempAnswer].name;
+            tempIndices = tempIndices.filter(tempIndex => (tempIndex !=tempAnswer && tempIndex != studentIndex));
+        }
     })
+    
     //replace one option with right answer
     let rndRightOption = quizAnswers[fnRandomizeNumber(1, 3)];
     rndRightOption.innerText = objectArray[studentIndex].name;
