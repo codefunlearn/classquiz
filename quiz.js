@@ -283,7 +283,7 @@ let nextClassfellow = function (objectArray, studentIndex) {
     //update the quiz options randomly
     let tempAnswer;
     //a new array with index of the correct answer 
-    let tempIndices = [studentIndex, 1, 2];
+    let tempIndices = [1, 2];
     
     //foreach loop using random unique index values to obtain names for the  quiz options
     quizAnswers.forEach(answer => {
