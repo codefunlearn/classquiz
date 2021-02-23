@@ -287,8 +287,10 @@ let nextClassfellow = function (objectArray, studentIndex) {
     //foreach loop using random unique index values to obtain names for the  quiz options
     quizAnswers.forEach(answer => {
         //ensuring unique names in the options list using filter()
-        tempAnswer = fnRandomizeNumber(0, objectArray.length - 1);
-        while (tempAnswer == studentIndex) {tempAnswer = fnRandomizeNumber(0, objectArray.length - 1)}
+        tempAnswer = studentIndex;
+        while (tempAnswer == studentIndex) {
+            tempAnswer = fnRandomizeNumber(0, objectArray.length - 1)
+        }
         if  (tempAnswer != studentIndex) {
             answer.innerText = objectArray[tempAnswer].name;
             tempIndices = tempIndices.filter(tempIndex => (tempIndex !=tempAnswer && tempIndex != studentIndex));
