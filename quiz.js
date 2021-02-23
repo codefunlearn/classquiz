@@ -251,7 +251,6 @@ let fnRandomizeNumber = function (min, max) {
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1) + min);
 };
-//select ten random students from original array to use for quiz (FUNCTION NOT USED)
 
 //select a random classfellow
 let currentStudent = function (objectArray, funcRandomize) {
